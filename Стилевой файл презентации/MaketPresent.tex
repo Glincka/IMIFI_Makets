@@ -1,0 +1,226 @@
+\documentclass[12pt, aspectratio=1610]{beamer}
+
+
+\usepackage{beamerSFU-VKR}
+
+\institute[ИМиФИ СФУ]{ФГАОУ ВО <<Сибирский федеральный университет>>\\
+    Институт математики  и фундаментальной информатики\\
+	Кафедра высшей и прикладной математики  \\                                  
+}
+\direction{Направление 01.04.02 Прикладная математика и информатика\\
+Магистерская программа 01.04.02.01 Математическое моделирование}
+\supervisor{д.ф.-м.н., профессор, Учёнов У.У.}
+\reviewer{к.ф.-м.н., доцент, Строгов С.С.}
+\title[Решение очень важной задачи]{Решение очень важной задачи}
+\author[Умнов В.В.]{Умнов Василий Васильевич}
+	
+
+
+\date[\today]{Красноярск\\\the\year{}}
+
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+\begin{document}
+
+\begin{frame}[t, plain]
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Актуальность темы исследования}
+\begin{block}{}
+	Тема исследования является \dots
+\end{block}
+Основные области применения:
+\begin{itemize}
+	\item Приложение 1
+	\item Приложение 2
+	\item \dots
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Цель и задачи}
+\begin{block}{Цель}
+Цель исследования в существительной форме (разработка, исследование, анализ, \dots)
+\end{block}
+\begin{block}{Задачи}
+	\begin{enumerate}
+		\item Исследовать\dots
+		\item Доказать\dots
+		\item Разработать\dots
+		\item Провести\dots
+	\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}
+	\justifying
+	\frametitle{Основные определения и обозначения}
+	Здесь и далее даются основные определения, необходимые для постановки математической задачи.
+
+	Можно вводить их в виде текста, а общеизвестные определения ввести в виде таблицы, например:
+
+	\begin{table}
+		\centering
+		\caption{Основные определения}
+		\begin{tabular}{|c|p{.7\textwidth}|}
+			\hline
+			$V$ & множество вершин\\\hline
+			$E$ & множество ребер, определяемое как $E\subseteq V\times V$\\\hline
+			$G=(V,E)$ & граф со множеством вершин $V$ и множеством ребер $E$\\\hline
+			$s$ & стартовая вершина\\\hline
+			$t$ & целевая вершина\\\hline
+		\end{tabular}
+	\end{table}
+	
+	\end{frame}
+
+\begin{frame}
+		\justifying
+		\frametitle{Постановка задачи}
+		\begin{block}{Трудная математическая задача}
+		\begin{tabular}{ll}
+		\textbf{Дано:} & граф $G=(V,E)$, стартовая и целевая вершины $s$ и $t$.\\
+		\textbf{Найти:} & кратчайший путь $(s,t)$ и последовательность вершин его образующих.
+		\end{tabular}
+		\end{block}
+		\begin{equation*}
+			\lim\limits_{x\rightarrow\infty}{\frac{\sin x}{x}},\quad \int\limits_a^b{x^2\;dx}.
+		\end{equation*}
+		Здесь можно дать краткую характеристику задачи, например: класс сложности задачи, особенности и пр.
+		Можно использовать сноску для вставки литературы\footnotemark.
+
+		\footnotetext{Ученый, А.Б. Очень важные результаты~// А.Б. Ученый~/ Знаменитый математический журнал. -- \No 1(2). -- 2024. -- С.~100-120.}
+\end{frame}	
+
+\begin{frame}
+	\justifying
+	\frametitle{Основные результаты}
+	Здесь и далее приводятся основные результаты работы: теоремы, доказательства, алгоритмы и пр.
+	\begin{block}{Теорема 1}
+		Формулировка всякой теоремы содержит три части:
+		\begin{enumerate}
+			\item Разъяснительная часть — множество, на котором рассматривается теорема;
+			\item Условие — посылка в теореме, сформулированной в условной форме: то есть те положения, при которых заключение имеет место;
+			\item Требование (или заключение) — что собственно необходимо доказать, или что об объекте утверждается.
+		\end{enumerate}		
+	\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\justifying
+	\frametitle{Основные результаты}
+	Учтите, что в текущей конфигурации \verb|beamer| позволяет использовать для псевдокода только окружение \verb|algorithmic|.
+	\begin{algorithmic}[1]%[5]	
+	\scriptsize
+	\Require{массив $A[n]$, содержащий $n$ элементов}
+	\Ensure{отсортированный массив $A[n]$}
+	\For{$j=1$ до $n-1$ с шагом 1}
+		\State $f=0$
+		\For{$i=0$ до $n-1-j$ с шагом 1}
+			\If{$A[i]>A[i+1]$}
+				\State Обменять $A[i]$, $A[i+1]$
+				\State $f=1$
+			\EndIf
+			\If{$F=0$}
+				\State Выйти из цикла
+			\EndIf
+		\EndFor
+	\EndFor
+	\end{algorithmic}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Основные результаты}
+	В презентации допускается использование двух и более колонок, путем использования окружения \verb!columns!. Выравнивание по высоте задается аргументом \verb|[T], [c], [b]|.
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+		\begin{itemize}
+			\item Результат 1
+			\item Результат 2
+			\item \dots
+		\end{itemize}		
+		\column{.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{IMLogo.png}	
+			\caption{Пример рисунка}
+		\end{figure}		
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Вычислительные эксперименты}
+	\justifying
+	\label{Exp1}
+	\begin{block}{}
+		Вычислительные эксперименты должны содержать цель, входные данные, описание и результат.
+	\end{block}
+	\textbf{Цель:} сравнить алгоритм Alg1 для решения задачи Problem с алгоритмом Alg2.
+	
+	\textbf{Входные данные:} перечень входных данных.
+
+	\textbf{Описание.} Сравнение алгоритмом осуществлялось по \dots
+
+	\textbf{Результаты.} Приводятся графики, таблицы и иные способы обнародования результатов проведённых экспериментов.	
+	
+	\hyperlink{Results1}{\beamerbutton{Больше результатов}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Заключение}
+	\justifying
+	Здесь кратко излагаются основные результаты работы, достижение поставленных целей и задач, дополнительные выводы.
+	\begin{itemize}
+		\item Вывод 1
+		\item Вывод 2
+		\item Задача 1 решена, получено \dots
+		\item \dots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Аппробация работы}
+	\justifying
+	Здесь перечисляются все конференции, на которых представлялась работа, и публикации по теме работы.
+	\begin{itemize}
+		\item XXIII Международная конференция имени А. Ф. Терпугова <<ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ И МАТЕМАТИЧЕСКОЕ МОДЕЛИРОВАНИЕ>> (ИТММ -- 2024)
+		\item \dots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Основная литература}
+	Здесь приводится самая главная литература по исследованию, на которую ссылались.
+	\begin{thebibliography}{9}
+		\setbeamertemplate{bibliography item}[article]
+		\bibitem{A}
+		Ученов, А.Б. Самое важное открытие 2024~// А.Б. Ученов~/ Естетственно научный журнал. -- \No 1(2). -- 2024. -- С.~123-145.
+		\bibitem{B}
+		Мастеров, В.Г. О новой задаче тысячелетия~// В.Г. Мастеров~/ Математичекий вестник им. Тьюринга. -- \No 4(20). -- 2024. -- С.~1337-1350.
+	\end{thebibliography}
+\end{frame}
+
+\begin{frame}[plain]
+	\centering\Huge Благодарю за внимание!
+\end{frame}
+
+\begin{frame}[plain,noframenumbering,fragile]
+	\frametitle{Вспомогательные слайды}	
+	\justifying
+	\label{Results1}
+	Вспомогательные слайды следует помещать в конце презентации, после заключительного слова. Их не следует включать в общую номерацию слайдов, что достигается аргументом \verb|noframenumbering|.
+	
+	Для простоты навигации, можно создавать гиперссылки на слайды командами\linebreak \verb|\hyperlink| и \verb|\label|, например
+	
+	\hyperlink{Exp1}{\beamerbutton{Вернуться}}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+\end{document}

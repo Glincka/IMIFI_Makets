@@ -1,0 +1,27 @@
+\documentclass[14pt,oneside,a4paper]{extbook}
+
+\usepackage{disserSFU}
+
+\begin{document}
+
+\input{title.tex}
+
+\setcounter{page}{2}
+
+%Здесь можно добавить аннотацию и рецензию для магистров, не забывайте использовать команду \clearpage
+
+\tableofcontents
+
+\input{introduction.tex}
+
+\input{Glava1/gl1.tex}
+
+\printindex %Вывод списка сокращения
+
+%\nocite{*} %Вывод всей литературы, даже на которую нет ссылки в тексте
+\clearpage
+\bibliography{biblio}
+
+\input{Appendix/app1.tex}
+
+\end{document}

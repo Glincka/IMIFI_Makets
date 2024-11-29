@@ -1,0 +1,67 @@
+\section{Оформление текста и рубрикация}
+
+В шаблоне предусмотрено разбиение текста на разделы и подразделы, что реализуется командами \verb|\chapter{}| и \verb|\section{}|. Нумерация формул, определений, рисунков и подобных элементов выполнена согласно номеру раздела и номеру самого элемента, при этом переопределение значений счетчиков не требуется. Для оформления приложений добавлена команда \verb|\appChapter{}|, нумерация всех объектов внутри приложений начинается с буквы данного приложения.
+
+\subsection{Окружения теорем}
+Для удобства пользователя определены следующие окружения, которые номеруются в рамках текущей главы:
+\begin{itemize}
+  \item \verb|Theorem|
+  \item \verb|Lemma|
+  \item \verb|Example|
+  \item \verb|Preposition|
+  \item \verb|Remark|
+  \item \verb|Proof|
+  \item \verb|Corollary|
+  \item \verb|defin|
+\end{itemize}
+
+\begin{Theorem}
+  Алгоритм выполним за время \dots
+\end{Theorem}
+\begin{Proof}
+  Рассмотрим шаги алгоритма \dots
+\end{Proof}
+\begin{Lemma}
+  Если выполняется \dots, то \dots
+\end{Lemma}
+\begin{Example}
+  Рассмотрим следующее выражение \dots
+\end{Example}
+\begin{Preposition}
+  Здесь и далее полагаем \dots
+\end{Preposition}
+\begin{Remark}
+  Важно отметить, что \dots
+\end{Remark}
+\begin{Corollary}
+  Из \dots, следует \dots
+\end{Corollary}
+\begin{defin}
+  Следующее выражение будем называть \dots
+\end{defin}
+
+Рисунки вставляются с помощью стандартного окружения \verb|figure|. Например, рис.~\ref{fig1}.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+	\node[draw,circle] (a) at (0,0) {$a$};
+	\node[draw,circle] (b) at (2,2) {$b$};
+	\draw[-Latex,red,thick] (a)--(b) node[midway,sloped,above] {$a\rightarrow b$};
+\end{tikzpicture}
+\caption{Пример рисунка}
+\label{fig1}
+\end{figure}
+
+Таблицы вставляются с помощью окружения \verb|table|. Например, таблица~\ref{tab1}.
+
+\begin{table}%
+\caption{Пример таблицы}
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+1 & 2 & 3\\\hline
+4 & 5 & 6\\\hline
+\end{tabular}
+\label{tab1}
+\end{table}
