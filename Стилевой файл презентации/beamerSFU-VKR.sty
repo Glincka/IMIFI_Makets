@@ -35,7 +35,6 @@
 \usepackage{pgf}
 \usepackage{pgfplots}
 \usepackage{multicol}
-\usepackage{slashbox}
 \usepackage{tabularx}
 \usepackage{caption}
 \usepackage{longtable}
@@ -187,7 +186,9 @@
 \setbeamercolor{palette quaternary}{bg=IMgray,fg=white}
 \setbeamercolor{structure}{fg=IMgray} % itemize, enumerate, etc
 \setbeamercolor{author in head/foot}{bg=IMorange,fg=white}
+\setbeamercolor{block title}{bg=IMgray,fg=white}
 \setbeamercolor{section in toc}{fg=IMgray} % TOC sections
+\setbeamercolor{logo in foot}{bg=white,fg=black}
 
 % Override palette coloring with secondary
 \setbeamercolor{subsection in head/foot}{bg=IMorange,fg=white}
@@ -200,11 +201,10 @@
 	{%
 	 \leavevmode%
 		\hbox{%
-		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{white}%
+		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{logo in foot}%
 			\hspace*{.45cm}\vspace*{-1pt}\includegraphics[height=2.5ex]{IMfoot.png}												
 												%\hfill \insertshortauthor
-		\end{beamercolorbox}
-		%			
+		\end{beamercolorbox}%			
 			\begin{beamercolorbox}[wd=.55\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.1cm,rightskip=.3cm]{title in head/foot}%
 				\usebeamerfont{title in head/foot}\centering\insertshorttitle
 			\end{beamercolorbox}}%
@@ -212,7 +212,6 @@
 				\usebeamerfont{author in head/foot}%
 						  \insertshortauthor\hfill \insertframenumber{}/\inserttotalframenumber
 			\end{beamercolorbox}%
-		\vskip0pt%
 	}
 	\setbeamertemplate{navigation symbols}{}
 }
