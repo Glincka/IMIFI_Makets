@@ -1,0 +1,34 @@
+\documentclass[14pt,oneside,a4paper]{extbook}
+
+\usepackage{disserSFU}
+
+\begin{document}
+
+\input{title.tex}% Для бакалавров
+%\input{titlemasters.tex} % Для магистрантов
+
+\setcounter{page}{2}
+
+%Здесь можно добавить аннотацию и рецензию для магистров, не забывайте использовать команду \clearpage
+
+\tableofcontents
+\input{task.tex} %Задание на практику
+
+\input{introduction.tex}
+
+\input{Glava1/gl1.tex}
+
+\input{results.tex} %Результаты практики
+
+\input{approve.tex} %Аппробация, убрать если нет
+
+\printindex %Вывод списка сокращения
+
+%\nocite{*} %Вывод всей литературы, даже на которую нет ссылки в тексте
+\clearpage
+\phantomsection
+\bibliography{biblio}
+
+\input{Appendix/app1.tex}
+
+\end{document}
